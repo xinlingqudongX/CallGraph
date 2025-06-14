@@ -1,0 +1,31 @@
+# 目标应用配置
+apps:
+  - name: "WhatsApp"
+    package_name: "com.whatsapp"
+    spawn: true
+    hooks:
+      - class: "com.whatsapp.Main"
+        methods:
+          - "onCreate"
+          - "onResume"
+      - class: "com.whatsapp.Conversation"
+        methods:
+          - "onCreate"
+          - "onMessageReceived"
+      - class: "com.whatsapp.MessageHandler"
+        methods:
+          - "handleMessage"
+          - "processMessage"
+
+filter_rules:
+  include_classes:
+    - "com.whatsapp.*"
+  exclude_classes:
+    - "com.whatsapp.util.*"
+    - "com.whatsapp.debug.*"
+
+  # 可以添加更多目标应用配置
+  # - name: "另一个应用"
+  #   package_name: "com.another.app"
+  #   platform: "ios"
+  #   hooks: [...] 

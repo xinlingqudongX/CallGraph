@@ -1,0 +1,30 @@
+{
+  "global_filters": {
+    "include_patterns": [
+      "^[a-zA-Z_][a-zA-Z0-9_]*$",
+      "^[a-zA-Z_][a-zA-Z0-9_]*\\.[a-zA-Z_][a-zA-Z0-9_]*$"
+    ],
+    "exclude_patterns": [
+      "^_",
+      "^\\$",
+      "^<anonymous>",
+      "^\\[",
+      "^\\]",
+      "^\\{",
+      "^\\}"
+    ]
+  },
+  "module_specific_filters": {
+    "libc": {
+      "include": ["malloc", "free", "strlen", "memcpy"],
+      "exclude": ["_*"]
+    },
+    "android": {
+      "include": ["android.util.Log.*"],
+      "exclude": ["android.util.Log.v"]
+    }
+  },
+  "call_depth_limit": 10,
+  "min_call_count": 1,
+  "max_call_count": 1000
+} 

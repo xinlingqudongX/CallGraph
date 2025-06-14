@@ -1,0 +1,10 @@
+colorama==0.4.6
+frida==17.1.5
+frida-tools==14.1.2
+graphviz==0.20.3
+networkx==3.5
+prompt_toolkit==3.0.51
+Pygments==2.19.1
+PyYAML==6.0.2
+wcwidth==0.2.13
+websockets==13.1
